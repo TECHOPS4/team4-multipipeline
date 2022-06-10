@@ -21,6 +21,9 @@ pipeline{
       }
     }
     stage('code-build'){
+      when{
+        branch 'develop' 
+      }
       steps{
         sh 'cat /etc/passwd'
       }
